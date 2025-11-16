@@ -1,0 +1,40 @@
+{
+	"schemaVersion": 1,
+	"id": "moresnowballs",
+	"version": "${version}",
+	"name": "MoreSnowballs",
+	"description": "More Snowballs",
+	"authors": [
+		"CynicalMuse"
+	],
+	"contact": {
+		"homepage": "https://github.com/CynicalMuse",
+		"sources": "https://github.com/CynicalMuse/Fabric-1.21.X-MoreSnowballs"
+	},
+	"license": "CC0-1.0",
+	"icon": "assets/moresnowballs/icon.png",
+	"environment": "*",
+	"entrypoints": {
+		"main": [
+			"net.cynicalmuse.moresnowballs.MoreSnowballs"
+		],
+		"fabric-datagen": [
+			"net.cynicalmuse.moresnowballs.MoreSnowballsDataGenerator"
+		],
+        "client": [
+            "net.cynicalmuse.moresnowballs.MoreSnowballsClient"
+        ]
+	},
+	"mixins": [
+		"moresnowballs.mixins.json"
+	],
+	"depends": {
+		"fabricloader": ">=0.17.3",
+		"minecraft": "~1.21.1",
+		"java": ">=21",
+		"fabric-api": "*"
+	},
+	"suggests": {
+		"another-mod": "*"
+	}
+}
