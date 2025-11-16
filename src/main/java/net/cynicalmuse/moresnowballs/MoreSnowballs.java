@@ -1,5 +1,7 @@
 package net.cynicalmuse.moresnowballs;
 
+import net.cynicalmuse.moresnowballs.entity.ModEntities;
+import net.cynicalmuse.moresnowballs.item.ModItems;
 import net.fabricmc.api.ModInitializer;
 
 import org.slf4j.Logger;
@@ -11,6 +13,9 @@ public class MoreSnowballs implements ModInitializer {
 
 	@Override
 	public void onInitialize() {
+
+        ModItems.registerModItems();
+        ModEntities.registerModEntities();
 
 	}
 }
