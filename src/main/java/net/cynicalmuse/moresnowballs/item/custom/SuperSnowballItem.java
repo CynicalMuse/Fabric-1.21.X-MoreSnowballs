@@ -3,7 +3,6 @@ package net.cynicalmuse.moresnowballs.item.custom;
 import net.cynicalmuse.moresnowballs.entity.custom.SuperSnowballEntity;
 import net.minecraft.entity.player.PlayerEntity;
 import net.minecraft.entity.projectile.ProjectileEntity;
-import net.minecraft.entity.projectile.thrown.SnowballEntity;
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemStack;
 import net.minecraft.item.ProjectileItem;
@@ -34,10 +33,10 @@ public class SuperSnowballItem extends Item implements ProjectileItem {
                 0.4F / (world.getRandom().nextFloat() * 0.4F + 0.8F)
         );
         if (!world.isClient) {
-            SnowballEntity snowballEntity = new SnowballEntity(world, user);
-            snowballEntity.setItem(itemStack);
-            snowballEntity.setVelocity(user, user.getPitch(), user.getYaw(), 0.0F, 1.5F, 1.0F);
-            world.spawnEntity(snowballEntity);
+            SuperSnowballEntity superSnowball = new SuperSnowballEntity(world, user);
+            superSnowball.setItem(itemStack);
+            superSnowball.setVelocity(user, user.getPitch(), user.getYaw(), 0.0F, 1.5F, 1.0F);
+            world.spawnEntity(superSnowball);
         }
 
         user.incrementStat(Stats.USED.getOrCreateStat(this));
